@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Survey Form, Free  Camp Code Exercise" />
+    <meta
+      name="description"
+      content="Free  Code Camp Exercise for responsive Web Design Certification"
+    />
+    <meta name="subject" content="survey form" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Ingrid Inara, @_IngridInara" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Survey Title</h1>
+      <p id="description">
+        <strong
+          >This is a survey form & also an exercise from free code camp.</strong
+        >
+      </p>
+      <form action="#" id="survey-form" autocomplete="off" method="post">
+        <label for="name" id="name-label">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="e.g. Ingrid Inara"
+          size="30"
+          maxlength="10"
+          autofocus
+          aria-labelledby="name-label"
+          required
+          aria-required="true"
+          aria-describedby="user-name"
+        />
+        <span id="username_feedback" aria-live="polite" class="hidden"
+          >error message will appear in here</span
+        >
+        <label for="email" id="email-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="name@mail.com"
+          autofocus
+          pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$"
+          aria-labelledby="email-label"
+          required
+          aria-required="true"
+          aria-describedby="user-email"
+        />
+        <span id="useremail_feedback" aria-live="polite" class="hidden"
+          >error message will appear in here</span
+        >
+        <label for="number" id="number-label"
+          >Age <small> (optional) </small></label
+        >
+        <input
+          type="number"
+          id="number"
+          name="number"
+          min="0"
+          max="10"
+          step="1"
+          placeholder="e.g. 21"
+          autofocus
+          aria-labelleddby="number-label"
+          aria-describedby="user-age"
+        />
+        <span id="userage_feedback" aria-live="polite" class="hidden"
+          >error message will appear in here</span
+        >
+        <label for="dropdown" id="dropdown-label"
+          >Select an option on the dropdown menu</label
+        >
+        <select
+          id="dropdown"
+          aria-labelleddby="dropdown-label"
+          aria-describedby="dropdown-menu"
+        >
+          <option value="" disabled selected>--- Select an Option ---</option>
+          <optgroup label=" First Group" />
+          <option value="Option-1A">Option A</option>
+          <option value="Option-1B">Option B</option>
+          <option value="Option-1C">Option C</option>
+          <optgroup label=" Second Group" />
+          <option value="Option-2A">Option A</option>
+          <option value="Option-2B">Option B</option>
+          <option value="Option-2C">Option C</option>
+        </select>
+        </label
+        >
+
+        <fieldset required aria-required="true">
+          <legend>Select Radio Button Options</legend>
+          <div>
+            <label for="A1" id="option-A1-label" class="radio-wrapper-label">
+              <input
+                id="A1"
+                type="radio"
+                name="radioButtonOptionA"
+                value=" A1"
+                aria-labelledby="option-A1-label"
+                aria-describedby="option-A1"
+              />
+              <span class="radio-customized"></span>
+              <span class="text-radio-customized">Option A 1</span>
+            </label>
+
+            <label for="A2" id="option-A2-label" class="radio-wrapper-label">
+              <input
+                id="A2"
+                type="radio"
+                name="radioButtonOptionA"
+                value=" A2"
+                aria-labelledby="option-A2-label"
+                aria-describedby="option-A2"
+              />
+              <span class="radio-customized"></span>
+              <span class="text-radio-customized">Option A 2</span>
+            </label>
+
+            <label for="A3" id="option-A3-label" class="radio-wrapper-label">
+              <input
+                id="A3"
+                type="radio"
+                name="radioButtonOptionA"
+                value=" A3"
+                aria-labelledby="option-A3-label"
+                aria-describedby="option-A3"
+              />
+              <span class="radio-customized"></span>
+              <span class="text-radio-customized">Option A 3</span>
+            </label>
+          </div>
+          <div>
+            <label for="B1" id="option-B1-label" class="radio-wrapper-label">
+              <input
+                id="B1"
+                type="radio"
+                name="radioButtonOptionB"
+                value=" B1"
+                aria-labelledby="option-B1-label"
+                aria-describedby="option-B1"
+              />
+              <span class="radio-customized"></span>
+              <span class="text-radio-customized">Option B 1</span>
+            </label>
+
+            <label for="B2" id="option-B2-label" class="radio-wrapper-label">
+              <input
+                id="B2"
+                type="radio"
+                name="radioButtonOptionB"
+                value=" B2"
+                aria-labelledby="option-B2-label"
+                aria-describedby="option-B2"
+              />
+              <span class="radio-customized"></span>
+              <span class="text-radio-customized">Option B 2</span>
+            </label>
+
+            <label for="B3" id="option-B3-label" class="radio-wrapper-label">
+              <input
+                id="B3"
+                type="radio"
+                name="radioButtonOptionB"
+                value=" B3 "
+                aria-labelledby="option-B3-label"
+                aria-describedby="option-B3"
+              />
+              <span class="radio-customized"></span>
+              <span class="text-radio-customized">Option B 3</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <p>Sellect as many options as you want:</p>
+        <label for="one" id="option-one-label" class="checkbox-wrapper-label">
+          <input
+            type="checkbox"
+            value="1"
+            id="one"
+            name="one"
+            aria-labelledby="option-one-label"
+            aria-describedby="option-one"
+          />
+          <span class="checkbox-customized"></span>
+          <span class="text-customized">One</span>
+        </label>
+
+        <label for="two" id="option-two-label" class="checkbox-wrapper-label">
+          <input
+            type="checkbox"
+            value="2"
+            id="two"
+            name="two"
+            aria-labelledby="option-two-label"
+            aria-describedby="option-two"
+          />
+          <span class="checkbox-customized"></span>
+          <span class="text-customized">Two</span>
+        </label>
+
+        <label
+          for="three"
+          id="option-three-label"
+          class="checkbox-wrapper-label"
+        >
+          <input
+            type="checkbox"
+            value="3"
+            id="three"
+            name="three"
+            aria-labelledby="option-three-label"
+            aria-describedby="option-three"
+          />
+          <span class="checkbox-customized"></span>
+          <span class="text-customized">Three</span>
+        </label>
+
+        <label for="four" id="option-four-label" class="checkbox-wrapper-label">
+          <input
+            type="checkbox"
+            value="4"
+            id="four"
+            name="four"
+            aria-labelledby="option-four-label"
+            aria-describedby="option-four"
+          />
+          <span class="checkbox-customized"></span>
+          <span class="text-customized">Four</span>
+        </label>
+
+        <label for="five" id="option-five-label" class="checkbox-wrapper-label">
+          <input
+            type="checkbox"
+            value="5"
+            id="five"
+            name="five"
+            aria-labelledby="option-five-label"
+            aria-describedby="option-five"
+          />
+          <span class="checkbox-customized"></span>
+          <span class="text-customized">Five</span>
+        </label>
+
+        <label for="six" id="option-six-label" class="checkbox-wrapper-label">
+          <input
+            type="checkbox"
+            value="6"
+            id="six"
+            name="six"
+            aria-labelledby="option-six-label"
+            aria-describedby="option-six"
+          />
+          <span class="checkbox-customized"></span>
+          <span class="text-customized">Six</span>
+        </label>
+
+        <label for="add-text" id="add-text-label"
+          >Its mandatory to write additional text in the text area hereunder to
+          proceed:</label
+        >
+        <textarea
+          name="add-text"
+          id="addText"
+          cols="30"
+          rows="10"
+          placeholder="Introduce additional text in here"
+          minlength="10"
+          maxlength="100"
+          autofocus
+          required
+          aria-required="true"
+          aria-labelledby="add-text-label"
+          aria-describedby="user-textarea"
+        ></textarea>
+        <span id="usertextarea_feedback" aria-live="polite" class="hidden"
+          >error message will appear in here</span
+        >
+        <button type="submit" id="submit" accesskey="s" aria-label="submit">
+          Submit
+        </button>
+      </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

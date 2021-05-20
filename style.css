@@ -1,0 +1,267 @@
+:root {
+  --ff-ss: Arial, Helvetica, sans-serif;
+  --ff-s: 'Times New Roman', Times, serif;
+  --fs-h1: 4rem;
+  --fs-p: 2rem;
+  --main-color: rgba(0, 128, 128, 0.5);
+  --background-color: white;
+  --hoover-color: gray;
+  --text-color: black;
+  --important-color: rgba(210, 10, 10, 0.9);
+  --fw-text: 400;
+  --fw-b: 900;
+}
+html {
+  font-size: 65.2%;
+  box-sizing: border-box;
+}
+body {
+  font-size: 2.1rem;
+  background: linear-gradient(-60deg, rgba(255, 55, 55, 0.3), white),
+    url('//unsplash.it/1024/1024') repeat 0 50%;
+  background-position: left bottom;
+  color: var(--text-color);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--main-color);
+  margin: 7rem 1rem;
+  padding: 2em;
+  font-weight: var(--fw-text);
+}
+#title {
+  font-family: var(--ff-s);
+  font-size: var(--fs-h1);
+  text-align: center;
+  color: var(--important-color);
+  margin: 0;
+}
+#description {
+  text-align: center;
+  color: var(--text-color);
+  font-size: var(--fs-p);
+  margin: 0;
+  padding: 1.5em;
+}
+/* form  */
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-size: var(--fs-p);
+  font-family: var(--ff-ss);
+}
+#survey-form > * {
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+  align-self: auto;
+}
+/* input : text, email & number  */
+input[type='text'],
+input[type='email'],
+input[type='number'] {
+  border-radius: 0.3em;
+  border-style: none;
+  text-indent: 2em;
+}
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='number']:hover {
+  background-color: var(--hoover-color);
+}
+input::placeholder {
+  padding: 0.5em 1em;
+  color: var(--text-color);
+}
+input[required]:placeholder-shown {
+  border: 0.2em solid var(--important-color);
+}
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus {
+  border: 0.2em solid var(--important-color);
+  background-color: var(--background-color);
+}
+input:focus::placeholder {
+  color: var(--important-color);
+}
+/* select, optgroup & option  */
+select {
+  border-radius: 0.3em;
+  border-style: none;
+  text-indent: 2em;
+}
+select:hover {
+  background-color: var(--hoover-color);
+}
+select:focus {
+  border: 0.2em solid var(--important-color);
+  background-color: var(--background-color);
+}
+select optgroup {
+  color: var(--important-color);
+}
+select option {
+  color: var(--text-color);
+}
+
+/* fieldset & radio button */
+/* radio button cannot be customized, therefore we hide and add a new customized one */
+/* with opacity 0 the element will be hidden but it will still be listened by the dom  */
+fieldset {
+  color: var(--text-color);
+  border: 0.2em solid var(--important-color);
+}
+fieldset:active {
+  background-color: var(--background-color);
+}
+fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+.radio-wrapper-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 3em;
+  margin: 1em;
+}
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  height: 0em;
+  width: 0em;
+  cursor: pointer;
+  background-color: var(--important-color);
+}
+.radio-wrapper-label .radio-customized {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  background-color: var(--background-color);
+}
+input[type='radio']:hover ~ .radio-customized {
+  background-color: var(--hoover-color);
+}
+input[type='radio']:checked ~ .radio-customized {
+  background-color: var(--background-color);
+}
+.radio-customized:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+input[type='radio']:checked ~ .radio-customized::after {
+  display: inline;
+}
+.radio-customized::after {
+  top: 0.3em;
+  left: 0.3em;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+  background-color: var(--important-color);
+}
+/* checkbox  */
+/* checkbox cannot be customized, therefore we hide and add a new customized one */
+/* with opacity 0 the element will be hidden but it will still be listened by the dom  */
+.checkbox-wrapper-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  height: 0em;
+  width: 0em;
+  background-color: var(--important-color);
+}
+.checkbox-wrapper-label .checkbox-customized {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: var(--background-color);
+}
+input[type='checkbox']:hover ~ .checkbox-customized {
+  background-color: var(--hoover-color);
+}
+input[type='checkbox']:checked ~ .checkbox-customized {
+  background-color: var(--important-color);
+}
+.checkbox-customized::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+input[type='checkbox']:checked ~ .checkbox-customized::after {
+  display: inline;
+}
+.checkbox-wrapper-label .checkbox-customized::after {
+  left: 0.5em;
+  top: 0.1em;
+  width: 0.3em;
+  height: 0.7em;
+  border: solid var(--background-color);
+  border-width: 0 0.1em 0.2em 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+.text-customized {
+  position: absolute;
+  top: 0em;
+  left: 3em;
+  font-size: 22px;
+}
+/* textarea */
+textarea {
+  text-indent: 2em;
+}
+textarea::placeholder {
+  padding: 0.5em 1em;
+  color: var(--text-color);
+}
+textarea:hover {
+  background-color: var(--hoover-color);
+}
+textarea:focus {
+  border: 0.2em solid var(--important-color);
+  background-color: var(--background-color);
+}
+textarea:focus::placeholder {
+  color: var(--important-color);
+}
+/* button */
+button {
+  display: block;
+  background-color: var(--important-color);
+  color: var(--background-color);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+button:hover,
+button:focus {
+  background-color: var(--hoover-color);
+}
+button:active {
+  background-color: var(--background-color);
+  color: var(--important-color);
+  font-weight: var(--fw-b);
+}
+/* hidden elements - to be customized when JS is applied */
+.hidden {
+  display: none;
+}
